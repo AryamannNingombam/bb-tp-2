@@ -1,16 +1,8 @@
 import { Skeleton, Switch, Card, Avatar, Menu, Tag, Typography } from 'antd'
-import {
-  EditOutlined,
-  EllipsisOutlined,
-  SettingOutlined,
-} from '@ant-design/icons'
-import { useQuery } from 'react-query'
-import { GetMemberData } from '../../services/member.service'
-
+import Data from '../../constants/data.json'
 const { Meta } = Card
 export default function TeamMemberPerformace() {
-  const memberData = useQuery('member-data', GetMemberData)
-  console.log(memberData.data)
+  const memberData = Data
   return (
     <>
       <div className="team-member-main-div">
@@ -18,7 +10,7 @@ export default function TeamMemberPerformace() {
           <Typography.Title level={5}>Team Member Performance</Typography.Title>
         </div>
 
-        {memberData?.data?.team?.map((member, index) => (
+        {memberData?.team?.map((member, index) => (
           <Card className="main-card" key={index}>
             <div className="container">
               <Meta

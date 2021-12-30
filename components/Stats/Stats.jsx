@@ -1,9 +1,7 @@
 import { Typography } from 'antd'
-import { ArcElement, Chart } from 'chart.js'
 import { Doughnut } from 'react-chartjs-2'
 import { Menu, Dropdown, Button, message, Space, Tooltip } from 'antd'
 import { DownOutlined, UserOutlined } from '@ant-design/icons'
-Chart.register(ArcElement)
 
 export default function Stats({ text, color, percentage, title, number }) {
   const menu = (

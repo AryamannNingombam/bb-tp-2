@@ -5,10 +5,32 @@ import TopNav from '../components/TopNav/TopNav'
 import TeamMemberPerformace from '../components/TeamMemberPerformance/TeamMemberPerformance'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import Stats from '../components/Stats/Stats'
+import MainGraph from '../components/MainGraph/MainGraph'
+import {
+  ArcElement,
+  BarElement,
+  CategoryScale,
+  Chart,
+  LinearScale,
+  LineElement,
+  PointElement,
+  Title,
+  Tooltip,
+} from 'chart.js'
+import BarGraph from '../components/BarGraph/BarGraph'
 
 const { SubMenu } = Menu
 const { Content, Sider } = Layout
-
+Chart.register(
+  BarElement,
+  LineElement,
+  ArcElement,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  Tooltip,
+  Title,
+)
 const queryClient = new QueryClient()
 function MyApp({ Component, pageProps }) {
   return (
@@ -48,10 +70,10 @@ function MyApp({ Component, pageProps }) {
                 text={'Tasks Today'}
               />
             </div>
-            <div className="tasks"></div>
+            <BarGraph />
           </div>
           <div className="section">
-            {' '}
+            <MainGraph />
             <TeamMemberPerformace />
           </div>
         </Content>
