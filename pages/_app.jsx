@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }) {
         <SideNav />
         <Content className="content">
           <TopNav />
-          <div className="section">
+          <div className="section top-section">
             <div className="stats-section">
               <Stats
                 color={'#FFD339'}
