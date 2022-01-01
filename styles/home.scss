@@ -1,5 +1,6 @@
 @import './mixins';
 .main-div {
+  max-width: 100vw;
   background-color: $light-background;
   display: flex;
   flex-direction: row;
