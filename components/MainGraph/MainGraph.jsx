@@ -37,6 +37,7 @@ export default function MainGraph() {
           ],
         }}
         options={{
+          maintainAspectRatio: false,
           plugins: {
             tooltip: {
               enabled: true,

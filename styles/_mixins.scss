@@ -10,7 +10,7 @@
     }
   }
   @if ($breakpoint == tablet2) {
-    @media only screen and (max-width: $breakpoint-width) {
+    @media only screen and (max-width: 500px) {
       @content;
     }
   }
